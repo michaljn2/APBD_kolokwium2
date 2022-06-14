@@ -10,6 +10,12 @@ namespace Kolokwium2.Services
     {
         public Task<bool> DoesMusicianExist(int idMusician);
 
-        public Task<IEnumerable<Track>> GetMusiciansTracks(int idMusician);
+        public Task<IEnumerable<Track>> GetTracks(int idMusician);
+        public Task<IEnumerable<MusicianTrack>> GetMusicianTracks(int idMusician);
+        public Task<bool> IsMusicianValidDoDelete(int idMusician);
+
+        public Task DeleteMusiciansTracks(int idMusician);
+        public Task DeleteMusician(int idMusician);
+        public Task SaveDatabase();
     }
 }

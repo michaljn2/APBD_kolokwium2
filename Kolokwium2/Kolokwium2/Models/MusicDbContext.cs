@@ -29,8 +29,8 @@ namespace Kolokwium2.Models
             modelBuilder.Entity<MusicianTrack>(e =>
             {
                 e.HasKey(e => new {e.IdMusician, e.IdTrack });
-                e.HasOne(e => e.Musician).WithMany(e => e.MusicianTracks).HasForeignKey(e => e.IdMusician)
-                .OnDelete(DeleteBehavior.Cascade);
+                e.HasOne(e => e.Musician).WithMany(e => e.MusicianTracks).HasForeignKey(e => e.IdMusician);
+                
                 e.HasOne(e => e.Track).WithMany(e => e.MusicianTracks).HasForeignKey(e => e.IdTrack)
                 .OnDelete(DeleteBehavior.Cascade);
                 e.ToTable("Musician_Track");
