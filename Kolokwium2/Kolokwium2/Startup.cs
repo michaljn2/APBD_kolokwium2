@@ -34,6 +34,7 @@ namespace Kolokwium2
                 opt.UseSqlServer("Data Source=db-mssql;Initial Catalog=2019SBD;Integrated Security=True");
             });
             services.AddScoped<IAlbumsService, AlbumsService>();
+            services.AddScoped<IMusiciansService, IMusiciansService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

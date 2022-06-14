@@ -7,10 +7,10 @@ namespace Kolokwium2.Models.DTOs
 {
     public class AlbumGet
     {
-        public int IdAlbum { get; set; }
+    
         public string AlbumName { get; set; }
         public DateTime PublishDate { get; set; }
-        List<Track> Tracks { get; set; }
+        public List<Track> Tracks { get; set; }
 
     }
     public class Track
